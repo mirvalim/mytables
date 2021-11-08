@@ -1,6 +1,7 @@
 <template>
   <div class="head">
    <div class="content">
+     <button class="btn" @click="$router.back()">Back</button>
      <div class="divpage">
        <h2>Profile</h2>
        <div class="items">
@@ -69,7 +70,7 @@
          <h3>Bs: </h3>
          <span>{{userProfile.company.bs}}</span>
        </div>
-       <button class="btn" @click="$router.back()">Back</button>
+
      </div>
 
    </div>
@@ -155,7 +156,7 @@ span{
   margin-top: 10px;
 }
 h2{
-  margin-left: 150px;
+
   color: #494848;
 }
 .items{
