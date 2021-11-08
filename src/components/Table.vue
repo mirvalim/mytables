@@ -1,16 +1,19 @@
 <template>
   <div class="hello">
-    <table class="st_table" style="border-collapse: collapse">
+    <table class="blue" style="border-collapse: collapse">
+      <thead>
       <tr class="st_row">
-        <td >Id</td>
-        <td >Name</td>
-        <td >Username</td>
-        <td >Email</td>
-        <td >Address</td>
-        <td >Phone</td>
-        <td >Website</td>
-        <td >Company</td>
+        <th >Id</th>
+        <th >Name</th>
+        <th >Username</th>
+        <th >Email</th>
+        <th >Address</th>
+        <th >Phone</th>
+        <th >Website</th>
+        <th >Company</th>
       </tr>
+      </thead>
+      <tbody>
       <tr v-for="(table, index ) of tables " :key="index" @click="$router.push('user-profile/' + table.id)">
         <td >{{table.id}}</td>
         <td >{{table.name}}</td>
@@ -22,6 +25,7 @@
         <td >{{table.company.name}}</td>
       </tr>
 
+      </tbody>
     </table>
   </div>
 </template>
@@ -48,6 +52,7 @@ export default {
             this.tables = res.data
           })
     }
+
   },
   created() {
     this.myTable()
@@ -58,31 +63,54 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
+table{
+  border:1px solid #5e5a5a;
+  width:100%;
 }
 
-td{
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.blue{
+  border:2px solid #1ABC9C;
 }
-.st_row{
-  height: 50px;
-  background-color: black;
-  color: #dddddd;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;;
+
+.blue thead{
+  background:#1ABC9C;
 }
-tr:nth-child(even) {
-  background-color: #dddddd;
+
+
+
+.purple thead{
+  background:#9B59B6;
 }
+
+thead{
+  color:white;
+}
+
+th,td{
+  text-align:center;
+  padding:5px 0;
+}
+
+tbody tr:nth-child(even){
+  background:#ECF0F1;
+
+}
+table thead th{
+  height: 40px;
+  font-size: 20px;
+}
+table tbody td{
+  border: 2px solid #e2e2e1;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5e5e5e;
+}
+tbody tr:hover{
+  background:#BDC3C7;
+  color:#FFFFFF;
+}
+
+
 
 </style>
