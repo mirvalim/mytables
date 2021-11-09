@@ -15,7 +15,8 @@
       </thead>
       <tbody>
       <tr v-for="(table, index ) of tables " :key="index" @click="$router.push('user-profile/' + table.id)">
-        <td >{{table.id}}</td>
+        <td ><img style="width: 30px;height: 30px; border-radius: 50%"  src="https://www.accenture.com/t20200622T032553Z__w__/us-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Images/Global/General/54/Accenture-Jim-Wilson-724x543.png" alt="" class="profile__image">
+        </td>
         <td >{{table.name}}</td>
         <td >{{table.username}}</td>
         <td >{{table.email}}</td>
@@ -24,7 +25,6 @@
         <td >{{table.website}}</td>
         <td >{{table.company.name}}</td>
       </tr>
-
       </tbody>
     </table>
   </div>
@@ -91,8 +91,9 @@ table tbody td{
 
 
 }
-table tbody tr{
-  padding-top: 10px;
+
+table tbody tr {
+
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 tbody tr:hover{
