@@ -2,7 +2,7 @@
   <div class="hello">
     <table class="blue" style="border-collapse: collapse">
       <thead>
-      <tr class="st_row">
+      <tr style="color: black" class="st_row">
         <th >Id</th>
         <th >Name</th>
         <th >Username</th>
@@ -64,22 +64,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 table{
-  border:1px solid #5e5a5a;
   width:100%;
 }
-
-.blue{
-  border:2px solid #1ABC9C;
-}
-
 .blue thead{
-  background:#1ABC9C;
-}
-
-
-
-.purple thead{
-  background:#9B59B6;
+  background:white;
 }
 
 thead{
@@ -90,21 +78,22 @@ th,td{
   text-align:center;
   padding:5px 0;
 }
-
-tbody tr:nth-child(even){
-  background:#ECF0F1;
-
-}
 table thead th{
   height: 40px;
   font-size: 20px;
 }
 table tbody td{
-  border: 2px solid #e2e2e1;
+  border: none;
   height: 40px;
   font-size: 16px;
   font-weight: bold;
   color: #5e5e5e;
+
+
+}
+table tbody tr{
+  padding-top: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 tbody tr:hover{
   background:#BDC3C7;
