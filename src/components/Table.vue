@@ -75,7 +75,7 @@ thead{
 }
 
 th,td{
-  text-align:center;
+  text-align:start;
   padding:5px 0;
 }
 table thead th{
