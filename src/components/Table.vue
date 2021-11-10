@@ -88,8 +88,6 @@ table tbody td{
   font-size: 16px;
   font-weight: bold;
   color: #5e5e5e;
-
-
 }
 
 table tbody tr {
