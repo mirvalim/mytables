@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <router-link to="/schedul">render</router-link>
   </div>
 </template>
 
